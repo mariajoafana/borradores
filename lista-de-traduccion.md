@@ -18,7 +18,7 @@ date: 2016-10-01
 | contribute | contribuciones | ok | arojascastro |
 | project-team| equipo-de-proyecto | ok | vgayolrs |
 | blog | bitacora | no | no |
-| feedback | comentarios | in process | vgayolrs |
+| feedback | comentarios | ok | mariajoafana |
 | new-lessons-workflow | flujo-de-trabajo-nuevas-lecciones | ok | arojascastro |
 | reviewer-guidelines | guia-para-revisores | ok | arojascastro |
 | research | investigacion | ok | vgayolrs |
@@ -96,7 +96,7 @@ date: 2016-10-01
 
 | English | Español | translated | Commissioned |
 |  ------------- |  ------------- |  ------------- |  ------------- |
-| creating-network-diagrams-from-historical-sources | | no | no |
+| creating-network-diagrams-from-historical-sources | | in process | mariajoafana |
 
 #### Digital Exhibits and Augmented Reality
 
