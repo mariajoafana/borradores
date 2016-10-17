@@ -57,13 +57,13 @@ mensaje3 = 'I can't eat pickles'
 Cuenta el número de comillas sencillas en el mensaje3.  Para que esto trabaje correctamente tendremos que *salvar* el apóstrofe.
 
 ``` python 
-mensaje3 = ‘I can\’t eat pickles’
+mensaje3 = 'I can\'t eat pickles'
 ```
 
 O reescribir la frase como:
 
 ``` python 
-mensaje3 = “I can’t eat pickles”
+mensaje3 = "I can't eat pickles"
 ```
 `print` es un comando que imprime objetos en forma textual. Al combinar el comando `print` con una cadena de texto producimos una *declaración*.
 
@@ -71,7 +71,7 @@ Utilizarás el comando `print` de esta forma en los casos en los que se quiera g
 
 ```python 
 #archivo-salida.py
-f = open (‘holamundo.txt’,’w’)
+f = open ('holamundo.txt','w')
 f.write('hola mundo')
 f.close()
 ```
