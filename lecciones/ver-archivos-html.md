@@ -89,7 +89,7 @@ Salva el archivo en tu carpeta `programming-historian` con el nombre `hola-mundo
 Sugerencia de lecturas para aprender HTML
 
 -	[W3Schools HTML Tutorial]
--	[W3Schools HTML5 Tutorial
+-	[W3Schools HTML5 Tutorial]
 
 ---
 
