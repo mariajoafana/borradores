@@ -22,7 +22,7 @@ Esta lección muestra qué es un Localizador de recursos uniforme (*Uniform Reso
 
 ### Acerca de los URL
 
-Una *página web* es un archivo que está almacenado en otra computadora, una máquina conocida como +servidor web+. Cuando tú “vas” a una página web, lo que en realidad sucede es que tu computadora (el *cliente*) envía una solicitud al servidor (el *alojamiento* o *host*) a través de la red, y el servidor responde enviándote una copia de la página a tu máquina. Una manera de ir a una página web con tu navegador es seguir un enlace a alguna otra parte. También tienes la posibilidad de pegar o escribir un localizador de recursos uniforme (URL) diectamente en tu navegador. El URL de indica a tu navegador donde encontrar un recurso en línea específicando el servidor, directorio y nombre del archivo a ser recuperado, así como el tipo de *protocolo* que tu navegador y el servidor estarán de acuerdo en usar mientras intercambian información (como HTTP o *protocolo de transferencia de híper texto*). La estructura básica de un URL es:
+Una *página web* es un archivo que está almacenado en otra computadora, una máquina conocida como +servidor web+. Cuando tú “vas” a una página web, lo que en realidad sucede es que tu computadora (el *cliente*) envía una solicitud al servidor (el *alojamiento* o *host*) a través de la red, y el servidor responde enviándote una copia de la página a tu máquina. Una manera de ir a una página web con tu navegador es seguir un enlace a alguna otra parte. También tienes la posibilidad de pegar o escribir un localizador de recursos uniforme (URL) diectamente en tu navegador. El URL le indica a tu navegador donde encontrar un recurso en línea especificando el servidor, directorio y nombre del archivo a ser recuperado, así como el tipo de *protocolo* que tu navegador y el servidor estarán de acuerdo en usar mientras intercambian información (como HTTP o *protocolo de transferencia de híper texto*). La estructura básica de un URL es:
 
 ```
 protocol://host:port//path?query
@@ -58,9 +58,9 @@ El fragmento de texto después de “?” representa la consulta. Puedes aprende
 
 ## Abrir URLS con Python
 
-Como historiador digital a menudo te encontrarás esperando utilizar los datos alojados en una base de datos académica en línea. Para obtener estos datos puedes abrir una URL a la vez y copiar y pegar su contenido a un archivo de texto, o puedes utilizar Python para hacer una cosecha  procesamiento automático de las páginas web. Para hacer esto tienes que ser capaz de abrir cualquier URL con tus propios programas. El lenguaje Python incluye un número de formas estádar para hacer esto.
+Como historiador digital a menudo te encontrarás esperando utilizar los datos alojados en una base de datos académica en línea. Para obtener estos datos puedes abrir una URL a la vez y copiar y pegar su contenido a un archivo de texto, o puedes utilizar Python para hacer una cosecha procesamiento automático de las páginas web [sugiero: para cosechar y procesar las páginas web automáticamete]. Para hacer esto tienes que ser capaz de abrir cualquier URL con tus propios programas. El lenguaje Python incluye un número de formas estádar para hacer esto.
 
-Como ejemplo, vamos a trabajar con una tipo de archifo que podrás encontrar haciendo investigación histórica. Digamos que te interesan las relaciones étnicas en la Gran Bretaña del siglo XVIII. The Old Bailey Online (OBO) es una rica fuente que proporciona transcripciones de juicios de 1674 a 1913 y es un buen lugar para buscar documentación.
+Como ejemplo, vamos a trabajar con una tipo de archivo que podrás encontrar haciendo investigación histórica. Digamos que te interesan las relaciones étnicas en la Gran Bretaña del siglo XVIII. The Old Bailey Online (OBO) es una rica fuente que proporciona transcripciones de juicios de 1674 a 1913 y es un buen lugar para buscar documentación.
 
 {% include figure.html filename="old-bailey.png" caption="The Old Bailey Online Homepage" %}
 
@@ -101,7 +101,7 @@ En la línea siguiente invocamos a la función `urlopen` que está almacenada en
 
 Utilizamos entonces el método `read`, que ya usamos anteriormente, para copiar el contenido de esa página web abierta en una nueva variable llamada *webContent*.
 
-Asegúrate de qu epuedes reconocer las variables (hay 3), los módulos (1), los métodos (2) y los parámetros (1) antes de seguir adelante.
+Asegúrate de que puedes reconocer las variables (hay 3), los módulos (1), los métodos (2) y los parámetros (1) antes de seguir adelante.
 
 Al ejecutar el programa, te darás cuenta que en el panel de salida se muestra algo etiquetado en HTML:
 
@@ -113,11 +113,11 @@ Al ejecutar el programa, te darás cuenta que en el panel de salida se muestra a
 	<meta http-equiv="content-type" content=
 ``` 
 
-El contenido del proceso judicial está mucho más adelante en la página. Lo que vemos aquí es solamente en código HTML de la parte superior del documento. Esto no es lo qeu necesitamos para una investigación histórica, pero no te preocupes: en breve aprenderás cómo quitar el exceso de etiquetas y obtener el contenido que estás buscando.
+El contenido del proceso judicial está mucho más adelante en la página. Lo que vemos aquí es solamente en código HTML de la parte superior del documento. Esto no es lo que necesitamos para una investigación histórica, pero no te preocupes: en breve aprenderás cómo quitar el exceso de etiquetas y obtener el contenido que estás buscando.
 
 ## Guardar una copia local de una página web
 
-Dado que ya sabes lo suficiente acerca de escribir en archivos, resulta bastante sencillo modificar el programa antoerior para que escriba el contenido de la cadena de texto *webContent" en un archivo local de nuestra computadora en vez de en el panel de salida. Copia el siguiente programa en Komodo Edit, guárdalo como `guardar-paginaweb.py` y ejecútalo. Abre en tu navegador el archivo creado en tu disco duro (`obo-t17800628-33.html`) para confirmar que la copia que guardaste es igual a la que está en línea.
+Dado que ya sabes lo suficiente acerca de escribir en archivos, resulta bastante sencillo modificar el programa anterior para que escriba el contenido de la cadena de texto *webContent" en un archivo local de nuestra computadora en vez de en el panel de salida. Copia el siguiente programa en Komodo Edit, guárdalo como `guardar-paginaweb.py` y ejecútalo. Abre en tu navegador el archivo creado en tu disco duro (`obo-t17800628-33.html`) para confirmar que la copia que guardaste es igual a la que está en línea.
 
 ``` python
 # guardar-paginaweb.py
