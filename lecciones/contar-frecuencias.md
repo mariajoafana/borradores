@@ -96,11 +96,11 @@ Si estudias esta lista por comprensión cuidadosamente descrubrirás que hace ex
 
 Por regla general es más acertado que utilices un código que entiendas en vez de un código que se ejecute más rapidamente.
 
-En este punto tenemos una lista de pares en la que cada par contiene una palabra y su frecuencia. Esta lista es algo redundante. Si el artículo 'the' se encuentra 500 veces, entonces esta lista contendrá quinientas copias del par ('the', 500). También la lista tiene el orden en el que aparecen las palabras en el texto original en vez de enlistar las palabras de la más a la menos frecuente. Podemos resolver ambos problemas convirtiendo la lista en un diccionario e imprimiendo entonces el diccionario en el orden en el que aparecen de más a menos los elementos.
+En este punto tenemos una lista de pares en la que cada par contiene una palabra y su frecuencia. Esta lista es algo redundante. Si el artículo 'the' se encuentra 500 veces, entonces esta lista contendrá quinientas copias del par ('the', 500). También la lista tiene el orden en el que aparecen las palabras en el texto original en vez de listar las palabras de la más a la menos frecuente. Podemos resolver ambos problemas convirtiendo la lista en un diccionario e imprimiéndolo en orden, desde los elementos que más aparecen hasta los que menos.
 
 ## Diccionarios de Python
 
-Las cadenas y las listas están ordenadas secuencialmente, lo cual significa que puedes acceder a sus contenidos utilizando un índice, un número que comienza en 0. Si tienes una lista que contiene cadenas, puedes utilizar un par de índices para acceder primero a una cadena particular de la lista y luego a un carácter particular de esa cadena. Estudia los ejemplos siguientes.
+Las cadenas y las listas están ordenadas secuencialmente, lo cual significa que puedes acceder a sus contenidos utilizando un índice, un número que comienza en 0. Si tienes una lista que contiene cadenas, puedes utilizar un par de índices para acceder primero a una cadena particular de la lista y luego a un carácter particular de esa cadena. Estudia los siguientes ejemplos.
 
 ``` python
 s = 'hello world'
@@ -124,7 +124,7 @@ print(m[1][0])
 -> w
 ```
 
-Para seguirle el rastro a las frecuencias, vamos a utilizar otro tipo de objeto de Python, un diccionario. El diccionario es una colección *no-ordenanda* de objetos. Esto significa que no puedes usar un índice para recobrar elementos de ella. Sin embargo, puedes buscarlos mediante la utilización de una clave (de ahi el nombre de *diccionario*). Estudia el ejemplo siguiente:
+Para seguirle el rastro a las frecuencias, vamos a utilizar otro tipo de objeto de Python, un diccionario. El diccionario es una colección *no-ordenanda* de objetos. Esto significa que no puedes usar un índice para recobrar elementos de ella. Sin embargo, puedes buscarlos mediante la utilización de una clave (de ahi el nombre de *diccionario*). Estudia el siguiente ejemplo:
 
 ``` python
 d = {'world': 1, 'hello': 0}
@@ -138,13 +138,13 @@ print(d.keys())
 -> ['world', 'hello']
 ```
 
-Los diccionarios pueden resultar algo confusos para un programador novato. Trata de pensarlos como un diccionario de palabras de cualquier lengua. Si no sabes (o recuerdas) exactamente en qué difiere "biyectiva" de "inyectiva" puedes buscar los dos términos en el *Diccionario de la Lengua Española*. El mismo principio se aplica cuando imprimes `print(d['hello']);` excepto que, en vez de imprimir una definición literaria imprime el valor asociado con la palabra clave 'hello' tal como lo definiste cuando creaste el diccionatio llamado *d*. En este caso, el valor es "0".
+Los diccionarios pueden resultar algo confusos para un programador novato. Trata de pensarlos como un diccionario de palabras de cualquier lengua. Si no sabes (o recuerdas) exactamente en qué difiere "biyectiva" de "inyectiva" puedes buscar los dos términos en el *Diccionario de la Lengua Española*. El mismo principio se aplica cuando imprimes `print(d['hello']);` excepto que, en vez de imprimir una definición literaria imprime el valor asociado con la palabra clave 'hello' tal como lo definiste cuando creaste el diccionario llamado *d*. En este caso, el valor es "0".
 
 Toma en cuenta que utilizas paréntesis para definir el diccionario y corchetes para acceder a las cosas dentro de él. La operación `keys` devuelve una lista de claves (*keys*) que se definen en el diccionario.
 
 ## Los pares palabra-frecuencia
 
-Sobre la base de lo que tenemos hasta ahora queremos una función que pueda convertir una lista de palabras en un diccionario de pares de palabra-frecuencia. El único comando nuevo que vamos a necesitar en `dict`, que hace un diccionario a partir de una lista de pares. Copia lo siguiente y añádelo en el módulo `obo-py`.
+Sobre la base de lo que tenemos hasta ahora, queremos una función que pueda convertir una lista de palabras en un diccionario de pares de palabra-frecuencia. El único comando nuevo que vamos a necesitar en `dict`, que hace un diccionario a partir de una lista de pares. Copia lo siguiente y añádelo en el módulo `obo-py`.
 
 ``` python
 # Dada una lista de palabras, devuelve un diccionario de
