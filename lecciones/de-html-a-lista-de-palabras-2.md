@@ -21,7 +21,7 @@ En esa lección aprenderás los comandos de Python que son necesarios para imple
 - Revisar cada carácter de la cadena de texto *contenidoPagina*, uno por uno.
 - Si el carácter es un corchete angular izquierdo (\<) entonces estamos dentro de una etiqueta así que ignora cada uno de los caracteres siguientes.
 -  Si el carácter es un corchete angular derecho (\>) entonces estamos saliendo de una etiqueta; ignora el carácter actual, pero mira cada uno de los caracteres siguientes.
-- Si no estamos dentro de una etiqueta, añade añade el carácter actual a una nueva variable: *texto*.
+- Si no estamos dentro de una etiqueta, añade el carácter actual a una nueva variable: *texto*.
 - Secciona la cadena de caracteres *texto* en una lista de palabras individuales que puedan ser manipuladas después.
 
 ### Archivos requeridos para esta lección
@@ -37,7 +37,7 @@ El siguiente escalón es implementar el algoritmo que busca cada uno de los cara
 
 ### Bucles (*Looping*)
 
-Como muchos lenguajes de programación Python incluye un número de mecanismos de bucle . El que necesitarás usar en este caso es un *bucle for*. La versión debajo le dice al intérprete que haga algo en cada carácter de una cadena llamada *contenidoPagina*. La variable *caract* contendrá cada carácter de *contenidoPagina* en sucesión. le dimos el nombre *caract* porque no tiene porque no tiene un significado especial y podríamos haberlo llamado *tintineo* o *k* si nos hubiéramos sentido tentados. Puedes utilizar la codificación a colores en Komodo Edit como una guía para decidir si una palabra es una variable con un nombre dado por el usuario (como *caract*) o se trata de un nombre definido para Python que sirve para un propósito específico (como '`for`'). Generalmente es buena idea darle a las variables nombres que provean información acerca de lo que contienen. Esto hará mucho más fácil entender un programa que no has revisado desde hace tiempo. Con esto en mente, *tintineo* no es seguramente una buena elección para el nombre de la variable en este caso.
+Como muchos lenguajes de programación, Python incluye un número de mecanismos de bucle. El que necesitarás usar en este caso es un *bucle for*. La versión debajo le dice al intérprete que haga algo en cada carácter de una cadena llamada *contenidoPagina*. La variable *caract* contendrá cada carácter de *contenidoPagina* en sucesión. Le dimos el nombre *caract* porque no tiene un significado especial y podríamos haberlo llamado *tintineo* o *k* si nos hubiéramos sentido tentados. Puedes utilizar la codificación a colores en Komodo Edit como una guía para decidir si una palabra es una variable con un nombre dado por el usuario (como *caract*) o si se trata de un nombre definido para Python que sirve para un propósito específico (como '`for`'). Generalmente es buena idea darle a las variables nombres que provean información acerca de lo que contienen. Esto hará mucho más fácil entender un programa que no has revisado desde hace tiempo. Con esto en mente, *tintineo* no es seguramente una buena elección para el nombre de la variable en este caso.
 
 ``` python
 for caract in contenidoPagina:
@@ -46,7 +46,7 @@ for caract in contenidoPagina:
 
 ### Salto (*Branching*)
 
-Enseguida necesitarás una manera de comprobar los contenidos de una cadena y escoger la acción a seguir basada en esa prueba. De nuevo, como muchos lenguajes de programación, Python incluye un número de mecanismos de salto (o estructuras de control). La que vamos a utilizar aquí es la *sentencia condicional if*. La versión debajo hace una prueba para ver si la cadena llamada *caract* consiste en un corchete angula izquierdo. Como mencionamos anteriormente, la sangría o indentación en Python es importante. Si el código está indentado, Python lo ejecutará cuando la condición sea verdadera.
+Enseguida necesitarás una manera de comprobar los contenidos de una cadena y escoger la acción a seguir basada en esa prueba. De nuevo, como muchos lenguajes de programación, Python incluye un número de mecanismos de salto (o estructuras de control). La que vamos a utilizar aquí es la *sentencia condicional if*. La versión debajo hace una prueba para ver si la cadena llamada *caract* consiste en un corchete angular izquierdo. Como mencionamos anteriormente, la sangría o indentación en Python es importante. Si el código está indentado, Python lo ejecutará cuando la condición sea verdadera.
 
 Toma en cuanta que Python utiliza el signo de igual (=) para *asignación*, es decir, para ajustar que una cosa sea equivalente a otra. Con el fin de comprobar la igualdad, utiliza dos signos de igual (==) en lugar de uno. Los programadores principiantes suelen confundir ambos.
 
@@ -64,7 +64,7 @@ else:
     # haz algo distinto
 ```
 
-En Python tienes la opción de hacer pruebas adicionales después de la primera mediante la utilización de la sentencia condicional *elif* (abreviatura de *else if*).
+En Python tienes la opción de hacer pruebas adicionales después de la primera, mediante la utilización de la sentencia condicional *elif* (abreviatura de *else if*).
 
 ```python
 if caract == '<':
@@ -84,13 +84,13 @@ Ahora sabes lo suficiente para implementar la segunda parte del algoritmo: retir
 - Si el caracter es un corchete angular derecho (\>) estamos saliendo de una etiqueta, ignora el caracter
 - Si no estamos al interior de una etiqueta, anexa el caracter actual a una nueva variable: texto
 
-Para hacer esto, usarás un bucle para buscar cada caracter sucesivo en la cadena. Usarás entonces una sentencia condicional if / elif para determinar si el caracter es parte de una marca de HTML o parte del contenido, después anexar los caracteres de contenido a la cadena *texto*. ¿Cómo haremos el seguimiento de si nos encontramos dentro o fuera de una etiqueta? Podemos utilizar una variable entera que podrá ser 1 (verdadero) si el caracter correspondiente está dentro de una etiqueta y 0 (falso) si  no lo está (en el siguiente ejemplo hemos llamado a la variable "adentro").
+Para hacer esto, usarás un bucle para buscar cada caracter sucesivo en la cadena. Usarás entonces una sentencia condicional if / elif para determinar si el caracter es parte de una marca de HTML o parte del contenido, después anexa los caracteres de contenido a la cadena *texto*. ¿Cómo haremos el seguimiento de si nos encontramos dentro o fuera de una etiqueta? Podemos utilizar una variable entera que podrá ser 1 (verdadero) si el caracter correspondiente está dentro de una etiqueta y 0 (falso) si no lo está (en el siguiente ejemplo hemos llamado a la variable "adentro").
 
 ### La rutina de *stripTags*
 
 Poniendo todo junto, la versión final de la rutina se muestra a continuación. Toma en cuenta que hemos expandido la función *stripTags* que creamos anteriormente. Asegúrate de mantener la sangría o indentación como se muestra cuando remplaces la anterior rutina *stripTags* de *obo.py* con esta nueva.
 
-Yu rutina debe versa ligeramente diferente y, mientras que funcione, todo está bien. Si estás inclinado a experimentar, probablemente es mejor que pruebes nuestra versión para asegurarte que tu programa hace lo que hace el nuestro.
+Tu rutina debe versa ligeramente diferente y, mientras que funcione, todo está bien. Si estás inclinado a experimentar, probablemente es mejor que pruebes nuestra versión para asegurarte que tu programa hace lo que hace el nuestro.
 
 ``` python
 # obo.py
@@ -135,13 +135,13 @@ theResult = obo.stripTags(myText)
 
 Al utilizar `return`, hemos sido capaces de guardar la salida de datos de la función *stripTags* directamente en una variable que hemos denominado 'theResult', cuyo proceso podemos reanudar según sea necesario mediante código adicional.
 
-Toma en cuenta que en el ejemplo *stripTags* desde el inicio de esta subsección, el valor qu equeremos recuperar no es *contenidoPagina* sino el contenido qu eha sido despojado de las etiquetas HTML.
+Toma en cuenta que en el ejemplo *stripTags* desde el inicio de esta subsección, el valor que queremos recuperar no es *contenidoPagina* sino el contenido que ha sido despojado de las etiquetas HTML.
 
 Para comprobar nuestra nueva rutina de *stripTags* puedes ejecutar el programa *contenido-juicio.py* de nuevo. Dado que hemos redefinido *stripTags*, el programa *contenido-juicio.py* ahora hace algo diferente (y más cercano a lo que nosotros queremos). Antes de que continúes, asegúrate de comprender por qué cambia el comportamiento de *contenido-juicio.py* si solamente hemos editado *obo.py*.
 
 ## Listas en Python
 
-Ahora que tienes la habilidad para estraer texto en crudo de páginas Web, querrás tener ese texto en una forma que sea fácil de procesar. HAsta ahora, cuando has necesitado guardar información en tus programas de Python lo has hecho utilizando cadenas de texto. Sin embargo, hay un par de excepciones. En la rutina de *stripTags* también hiciste uso de un [entero][] llamado *inside* para guardar un 1 cuando estabas procesando una etiqueta y un 0 cuando no. Puedes hacer operaciones matemáticas con los enteros pero no puedes guardar fracciones o números decimales en una variable de entero.
+Ahora que tienes la habilidad para extraer texto en crudo de páginas Web, querrás tener ese texto en una forma que sea fácil de procesar. Hasta ahora, cuando has necesitado guardar información en tus programas de Python, lo has hecho utilizando cadenas de texto. Sin embargo, hay un par de excepciones. En la rutina de *stripTags* también hiciste uso de un [entero][] llamado *inside* para guardar un 1 cuando estabas procesando una etiqueta y un 0 cuando no. Puedes hacer operaciones matemáticas con los enteros pero no puedes guardar fracciones o números decimales en una variable de entero.
 
 ``` python
 inside = 1
@@ -176,9 +176,9 @@ wordlist = s2.split()
 print(wordlist)
 ```
 
-La primera rutina utiliza un bucle "for" para pasar por cada caracter en la cadena de texto *s1*, y añade el caracter al final de *charlist*. La segunda rutina utiliza la operación dividir para romper la cadena *s2* en fragmentos cada vez que encuentre espacios en blanco (espacios, tabulaciones, retornos de caroo y caracteres similares). En realidad, es simplificar un poco las cosasreferirse a los objetos de la segunda lista como palabras. Prueba a cambiar el contenido de *s2* del programa anterior por "howdy wordld!"  y ejecútalo de nuevo. ¿Qué sucedió con el signo de exclamación? Ten en cuenta que deberás alvar los cambios antes de utilizar Ejecutar Python de nuevo.
+La primera rutina utiliza un bucle "for" para pasar por cada caracter en la cadena de texto *s1*, y añade el caracter al final de *charlist*. La segunda rutina utiliza la operación dividir para romper la cadena *s2* en fragmentos cada vez que encuentre espacios en blanco (espacios, tabulaciones, retornos de carro y caracteres similares). En realidad, es simplificar un poco las cosas referirse a los objetos de la segunda lista como palabras. Prueba cambiar el contenido de *s2* del programa anterior por "howdy world!" y ejecútalo de nuevo. ¿Qué sucedió con el signo de exclamación? Ten en cuenta que deberás guardar los cambios antes de utilizar Ejecutar Python de nuevo.
 
-Tomando en cuenta lo que has aprendido hasta ahora, ya puedes abrir un URL, descargar la página Web en una cadena de texto, despojarla de las etiquetas HTML y luego cortar el texto en una lsita de palabras. Intenta ejecutar el siguiente programa:
+Tomando en cuenta lo que has aprendido hasta ahora, ya puedes abrir un URL, descargar la página Web en una cadena de texto, despojarla de las etiquetas HTML y luego cortar el texto en una lista de palabras. Intenta ejecutar el siguiente programa:
 
 ``` python
 #html-to-list1.py
