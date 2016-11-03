@@ -16,15 +16,15 @@ difficulty: 2
 
 ## Objetivos
 
-En este tutorial aprenderás primero lo básico de Markdown -una sintaxis de marcado para texto plano que es fácil de leer y de escribir-, así como [Pandoc](http://johnmacfarlane.net/pandoc/), una herramienta de línea de comandos que convierte el texto plano en un número de tipo de archivos bellamente formateados: PDF, .docx, HTML, LaTeX, presentaciones de diapositivas y más.[^1] Con Pandoc como tu herramienta digital de composición tipográfica, puedes usar la sitaxis de Markdown para añadir figuras, una bibliografía, formato, y cambiar fácilmente estilos de citación de Chicago a MLA (por ejemplo), todo ello utilizando texto plano.
+En este tutorial aprenderás primero lo básico de Markdown -una sintaxis de marcado para texto plano que es fácil de leer y de escribir-, así como [Pandoc](http://johnmacfarlane.net/pandoc/), una herramienta de línea de comandos que convierte el texto plano en un número de tipo de archivos bellamente formateados: PDF, .docx, HTML, LaTeX, presentaciones de diapositivas y más.[^1] Con Pandoc como tu herramienta digital de composición tipográfica, puedes usar la sitaxis de Markdown para añadir figuras, una bibliografía, formato y cambiar fácilmente estilos de citación de Chicago a MLA (por ejemplo), todo ello utilizando texto plano.
 
 El tutorial asume que no tienes conocimientos técnicos previos, pero escala con la experiencia ya que a menudo sugerimos técnicas más avanzadas hacia el final de cada sección. Éstas están claramente marcadas y pueden ser revisitadas después de alguna práctica y experimentación.
 
-En vez de seguir este tutorial de una manera mecánica, te recomendamos esforzarte en entender las soluciones ofrecidas aquí como una *metodología* que podría necesitar adaptarse posteriormente para ajustarse a tu entorno y flujo de trabajo. La instalación de las herramientas necesarias presenta tal vez el mayor obstáculo para la participación. Destina suficiente tiempo y paciencia para instalar todo correctamente o házlo con un colega que tenga una configuración similar para ayudarse mutuamente. Consulta la sección [Recursos útiles](#recursos-útiles) más adelante si te quedas atascado.[^2]
+En vez de seguir este tutorial de una manera mecánica, te recomendamos esforzarte por entender las soluciones ofrecidas aquí como una *metodología* que podría necesitar adaptarse posteriormente para ajustarse a tu entorno y flujo de trabajo. La instalación de las herramientas necesarias presenta tal vez el mayor obstáculo para la participación. Destina suficiente tiempo y paciencia para instalar todo correctamente o házlo con un colega que tenga una configuración similar para ayudarse mutuamente. Consulta la sección [Recursos útiles](#recursos-útiles) más adelante si te quedas atascado.[^2]
 
 ## Filosofía
 
-Escribir, almacenar y recuperar documentos son actividades centrales en el flujo de trabajo de la investigación en humanidades. Sin embargo, muchos autores basan su práctica en las herramientas y formatos propietarios que a veces no alcanzan a cubrir ni siquiera los requerimientos básicos de la escritura académica. Quizá  puedas recordarr cierta frustación por la fragilidad de las notas a pie de página, las bibliografías, figuras y borradores de libros escritos en Microsoft Word o Google Docs. Sin embargo, la mayoría de las revistas aún insisten en recibir textos en formato .docx.
+Escribir, almacenar y recuperar documentos son actividades centrales en el flujo de trabajo de la investigación en humanidades. Sin embargo, muchos autores basan su práctica en las herramientas y formatos propietarios que a veces no alcanzan a cubrir ni siquiera los requerimientos básicos de la escritura académica. Quizás puedas recordar cierta frustación por la fragilidad de las notas al pie de página, las bibliografías, figuras y borradores de libros escritos en Microsoft Word o Google Docs. Sin embargo, la mayoría de las revistas aún insisten en recibir textos en formato .docx.
 
 Pero más que causar una frustación personal, esta dependencia a las herramientas y formatos propietarios tiene implicaciones negativas para la comunidad académica a largo plazo. En este entorno, las revistas deben subcontratar la composición tipográfica, alienan a los autores de los contextos materiales de la publicación añadiendo otros obstáculos innecesarios a la libre circulación del conocimiento.[^3]
 
@@ -52,7 +52,7 @@ Inspirados en las buenas prácticas de una variedad de disciplinas nos hemos gui
 
 3. *Separación de forma y contenido.* Escribir y formatear al mismo tiempo distrae. La idea es escribir primero y dar formato más tarde, lo más cerca posible al momento de la publicación. Una tarea como cambiar el estilo de citación de Chicago a MLA debe ser sin dolor. Los editores de revistas que quieran ahorrar tiempo ante formatos innecesarios y corrección de textos, deben ser capaces de proporcionar a sus autores una platilla de formato que se encargue de las minucias de la composición tipográfica.
 
-4. *Soporte del aparato crítico.* El flujo de trabajo tiene que manejar con gracia notas a pie de página, cifras, caracteres internacionales y bibliografía.
+4. *Soporte del aparato crítico.* El flujo de trabajo tiene que manejar con gracia notas al pie de página, cifras, caracteres internacionales y bibliografía.
 
 5. *Independencia de plataforma.* Como los vectores de publicación se multiplcan, tenemos que ser capaces de generar una multiplicidad de formatos, incluyendo presentaciones de diapositivas, impresión, web y dispositivos móviles. Idealmente, nos gustaría ser capaces de generar los formatos más comunes sin romper las ligas bibliográficas. Nuestro flujo de trabajo debe ser portátil al grado que sería bueno poder copiar una carpeta a un *pendrive* y saber que contiene todo lo necesario para su publicación. Escribir en texto plano significa que puedes compartir fácilmente, editar y archivar tus documentos en prácticamente cualquier entorno. Por ejemplo, un temario de clase escrito en Markdown puede ser guardado como PDF, impreso como hoja de mano, convertido a HTML para la Web, todo desde el mismo archivo. Los archivos impresos y subidos a la Web pueden ser publicados de la misma fuente y tienen un aspecto similar, preservando la distribución lógica del material.
 
@@ -66,7 +66,7 @@ Expresamente omitiremos algunos detalles menudos relacionados con la instalació
 
 - **Terminal de línea de comandos.** Trabajar en la "línea de comandos" es lo mismo que escribir comandos en la terminal. En Mac sólo tienes que utilizar tu *Finder* para acceder a "Terminal". En Windows utiliza *PowerShell*. Es probable que los usuarios de Linux ya estén familiarizados con sus terminales. A continuación, vamos a cubrir los conceptos más basicos de cómo encontrar y utilizar la línea de comandos.
 
-- **Pandoc**. Las instrucciones detalladas de instalación específica para cada plataforma están disponibles en el [sitio web de Pandoc](http://johnmacfarlane.net/pandoc/installing.html). *Para este tutorial es crucial que instales Pandoc en tu máquina*, así que asegúrate de tomarte un tiempo navegando por las instrucciones. Pandoc fue creado y es mantenido por John MacFarlane, profesor de Filosofía en la Universidad de California en Berkeley. Esto es *humanidades digitales* en su mejor expresión y servirá como el motor de nuestro flujo de trabajo. Con Pandoc serás capaz de compilar el texto y la bibliografía de tu trabajo en documentos con un formato flexible y atractivo. Una vez que has seguido las instrucciones de instalación, verifica su instalación escribiendo en la línea de comandos de tu máquina "pandoc --version". Asumismos que por lo menos tienes la versión 1.12.3 liberada en enero de 2014.
+- **Pandoc**. Las instrucciones detalladas de instalación específica para cada plataforma están disponibles en el [sitio web de Pandoc](http://johnmacfarlane.net/pandoc/installing.html). *Para este tutorial es crucial que instales Pandoc en tu máquina*, así que asegúrate de tomarte un tiempo navegando por las instrucciones. Pandoc fue creado y es mantenido por John MacFarlane, profesor de Filosofía en la Universidad de California en Berkeley. Esto es *humanidades digitales* en su mejor expresión y servirá como el motor de nuestro flujo de trabajo. Con Pandoc serás capaz de compilar el texto y la bibliografía de tu trabajo en documentos con un formato flexible y atractivo. Una vez que hayas seguido las instrucciones de instalación, verifica su instalación escribiendo en la línea de comandos de tu máquina "pandoc --version". Asumimos que por lo menos tienes la versión 1.12.3 liberada en enero de 2014.
 
 Recomendamos que instales los dos siguientes programas de aplicación, mas no son un requisito indispensable para completar este tutorial.
 
@@ -95,17 +95,17 @@ El Markdown "Pandoc-flavored" almacena cada uno de los valores anteriores y los 
 ```
 # Sección 1  
 
-    ## Subsección 1.1  
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+## Subsección 1.1  
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-    El siguiente párrafo debe empezar como éste, sin sangría:
+El siguiente párrafo debe empezar como éste, sin sangría:
 
-    ## Subsección 1.2
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque  ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+## Subsección 1.2
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque  ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
-    # Sección 2
+# Sección 2
 
-    ## Subsección 2.1
+## Subsección 2.1
 ```
 
 Sigue adelante e introduce cualquier texto de relleno. Los espacios vacíos tienen significado en Markdown por lo que no debes poner sangría en los párrafos pero sí es importante que separes los párrafos con una línea en blanco. Las líneas en blanco también deben preceder a los encabezados de sección.
@@ -135,24 +135,24 @@ date: 20 de enero de 2014
 
 # Sección 1  
 
-    ## Subsección 1.1  
-    Lorem *ipsum* dolor sit amet, **consectetur** adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+## Subsección 1.1  
+Lorem *ipsum* dolor sit amet, **consectetur** adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-    El siguiente párrafo debe empezar como este, sin sangría:
+El siguiente párrafo debe empezar como este, sin sangría:
 
-    ## Subsección 1.2
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque  ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+## Subsección 1.2
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque  ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
-    # Sección 2
+# Sección 2
 
-    ## Subsección 2.1
+## Subsección 2.1
 	![una imagen](tu_imagen.jpg)
 
-    ## Subsección 2.2.
+## Subsección 2.2.
 
-    Una oración que requiere una cita.[^1]
+Una oración que requiere una cita.[^1]
 
-    [^1]: ¡Ésta es mi primer nota a pie de página! Y un [enlace](https://www.eff.org/).
+[^1]: ¡Ésta es mi primer nota a pie de página! Y un [enlace](https://www.eff.org/).
 ```
 
 Y como veremos en breve, este archivo de texto plano se puede representar como un muy buen PDF.
@@ -181,7 +181,7 @@ Una vez abierto verás una ventana de texto y un puntero (*prompt*) que puede ve
 
 Es muy común que tu carpeta "Documents" esté localizada en este directorio. Escribe `$ pwd` (= "*print working directory*") y oprime Enter para mostrar el nombre del directorio actual. Utiliza `$ pwd` cada vez que sientas que te has extraviado.
 
-El comando `$ ls` (= *list*), simplemente enlista los archivos en el directorio actual. Finalmente, puedes usar `$ cd>` (= *change directory*) como `$ cd NOMBRE_DE_LA_CARPETA` (en donde `NOMBRE_DE_LA_CARPETA` indica la carpeta en la que quieres navegar). Puedes utilizar `$ cd ..`para moverte automáticamente un nivel arriba en la estructura del directorio (el directorio principal de la carpeta en la que te encuentras actualmente). Una vez que has empezado a escribir el nombre de la carpeta, utiliza la tecla de tabulador para autocompletar el nombre -lo cual es particularmente útil para carpetas con nombre muy largos o nombres de carpetas que contienen espacios en blanco.[^6]
+El comando `$ ls` (= *list*), simplemente lista los archivos en el directorio actual. Finalmente, puedes usar `$ cd>` (= *change directory*) como `$ cd NOMBRE_DE_LA_CARPETA` (en donde `NOMBRE_DE_LA_CARPETA` indica la carpeta en la que quieres navegar). Puedes utilizar `$ cd ..`para moverte automáticamente un nivel arriba en la estructura del directorio (el directorio principal de la carpeta en la que te encuentras actualmente). Una vez que has empezado a escribir el nombre de la carpeta, utiliza la tecla de tabulador para autocompletar el nombre -lo cual es particularmente útil para carpetas con nombre muy largos o nombres de carpetas que contienen espacios en blanco.[^6]
 
 Estos tres comandos de terminal: `pwd`, `ls` y `cd` es todo lo que necesitas en este tutorial. Practica con ellos la navegación por las carpetas de tus documentos por unos minutos y mientras piensa en la manera en la que has organizado tus archivos. Si lo deseas, sigue lo que haces ayudándote de tu organizador de archivos de la interfaz gráfica de usuario (Finder) para poder orientarte.
 
@@ -231,7 +231,7 @@ $ pandoc -H formato.sty -o proyecto.pdf --number-sections --toc proyecto.tex
 
 En esta sección agregaremos una bibliografía a nuestro documento y después la convertiremos de un formato estilo Chicago a un formato estilo MLA.
 
-Si no estás usando un gestor de referencias bibliográficas como Endnote o Zotero, deberías comenzar a hacerlo inmediatamente. Nosotros preferimos Zotero porque, al igual que Pandoc, fue creado por la comunidad académica y, al igual que otros proyectos de código abierto, está liberado bajo una Licencia Pública General de GNU. Mucho más importante para nosotros es que tu gestor de referencias tenga la habilidad de generar bibliografías en formato de texto plano para estar en consonancia con nuestro principio de "todo en texto plano". Prosigue y abre el gestor de referencias de tu elección y añade algunas entradas de ejemplo. Cuando hayas terminado, encuentra la opción  para exportar tu bibliografía en formato BibTeX (.bib). Guarda tu archivo .bib en el directorio de tu proyecto y dale un nombre razonable como "proyecto.bib".
+Si no estás usando un gestor de referencias bibliográficas como Endnote o Zotero, deberías comenzar a hacerlo inmediatamente. Nosotros preferimos Zotero porque, al igual que Pandoc, fue creado por la comunidad académica y, al igual que otros proyectos de código abierto, está liberado bajo una Licencia Pública General de GNU. Mucho más importante para nosotros es que tu gestor de referencias tenga la habilidad de generar bibliografías en formato de texto plano para estar en consonancia con nuestro principio de "todo en texto plano". Prosigue y abre el gestor de referencias de tu elección y añade algunas entradas de ejemplo. Cuando hayas terminado, encuentra la opción para exportar tu bibliografía en formato BibTeX (.bib). Guarda tu archivo .bib en el directorio de tu proyecto y dale un nombre razonable como "proyecto.bib".
 
 La idea general es mantener tus fuentes organizadas en una base de datos bibliográfica centralizada mientras vas generando archivos .bib específicos y más pequeños que serán almacenados en el mismo diretorio de tu proyecto. Prosigue y abre tu archivo .bib con el editor de texto plano que hayas elegido.[^4]
 
@@ -250,11 +250,11 @@ Tu archivo .bib deberá contener múltiples entradas que se ven más o menos as�
     }
 ```
 
-Rara vez tendrás que editar esto a mano (aunque puedes hacerlo). En la mayoría de los casos, simplemente "exportas" el archivo .bib de Zotero o de un gestor de referencias similar. Tomate un momento para orientarte aquí. Cada entrada consiste en un tipo de documento, "artículo" (*article*) en nuestro caso, un identificador único (fyfe\_digital\_2011) y los metadatos relevantes de título (*title*), autor (*author*) y así. La cosa que más nos interesa es el identificador (ID) único que sigue inmediatamente al símbolo de llave ( { ) en la primera línea de cada entrada. El ID único es lo que nos permite conectar la bibliografía con el documento principal. deja este archivo abierto por ahora y regresa a tu archivo "principal.md".
+Rara vez tendrás que editar esto a mano (aunque puedes hacerlo). En la mayoría de los casos, simplemente "exportas" el archivo .bib de Zotero o de un gestor de referencias similar. Tomate un momento para orientarte aquí. Cada entrada consiste en un tipo de documento, "artículo" (*article*) en nuestro caso, un identificador único (fyfe\_digital\_2011) y los metadatos relevantes de título (*title*), autor (*author*) y así. La cosa que más nos interesa es el identificador (ID) único que sigue inmediatamente al símbolo de llave ( { ) en la primera línea de cada entrada. El ID único es lo que nos permite conectar la bibliografía con el documento principal. Deja este archivo abierto por ahora y regresa a tu archivo "principal.md".
 
-Edita la nota a pie de página en la primera línea de tu archivo "principal.md" para que se vea de una forma parecida a los siguientes ejemplos en los cuales `@nombre_título_fecha` puede ser reemplazado por uno de los ID únicos de tu archivo `proyecto.bib`.
+Edita la nota al pie de página en la primera línea de tu archivo "principal.md" para que se vea de una forma parecida a los siguientes ejemplos en los cuales `@nombre_título_fecha` puede ser reemplazado por uno de los ID únicos de tu archivo `proyecto.bib`.
 
-- `Una referencia bibliográfica formateada como ésta se traducirá apropiadamente tanto en un estilo de citación en texto -como en nota a pie- [@nombre_título_fecha, 67].`[^7]
+- `Una referencia bibliográfica formateada como ésta se traducirá apropiadamente tanto en un estilo de citación en texto -como en nota al pie- [@nombre_título_fecha, 67].`[^7]
 - `"Para citas entrecomilladas, pon la coma afuera de los signos de comillas" [@nombre_título_fecha, 67].`
 
 Una vez que ejecutes el markdown a través de Pandoc, "@fyfe\_digital\_2011" se ampliará a una citación completa en el estilo que hayas seleccionado. Puedes usar la sintaxis `@citacion`de cualquier manera que veas que encaja: dentro de las líneas de tu texto o en las notas a pie. Para generar una bibliografía simplemente incluye una sección llamada `# Bibliography` al final del documento.
@@ -280,7 +280,7 @@ La bandera de una `S` mayúscula significa "smart", un modo que produce "archivo
 
 ## Cambiar los estilos de citación
 
-El estilo de citación por defecto en Pandoc es el de Chicago autor-fecha. Podemos especificar un estilo diferente utilizando una hoja de estilo escrita en "lenguaje de estilo de citación" (CSL por *citation style language*, otra convención en texto plano utilizada para describir estilos de citas) y que es designado por la extensión de archivo .csl. Afortunadamente, el proyecto CSL mantiene un repositorio de estilos de citaciones comunes, algunas incluso ajustadas a ciertas revistas en específico. Visita <http://editor.citationstyles.org/about/> para encontrar el archivo .csl para el estilo Modern Language Association (MLA), descarga el archivo `modern-language-association.csl`y guárdalo en la carpeta de tu proyecto como `mla.csl`. Ahora, necesitamos decirle a Pandoc que utilice la hoja de estilo de MLA en vez de la de Chicago que tiene por defecto. Haremos esto actualizando el encabezado o bloque YAML:
+El estilo de citación por defecto en Pandoc es el de Chicago autor-fecha. Podemos especificar un estilo diferente utilizando una hoja de estilo escrita en "lenguaje de estilo de citación" (CSL por *citation style language*, otra convención en texto plano utilizada para describir estilos de citas) y que es designado por la extensión de archivo .csl. Afortunadamente, el proyecto CSL mantiene un repositorio de estilos de citaciones comunes, algunas incluso ajustadas a revistas específicas. Visita <http://editor.citationstyles.org/about/> para encontrar el archivo .csl para el estilo Modern Language Association (MLA), descarga el archivo `modern-language-association.csl`y guárdalo en la carpeta de tu proyecto como `mla.csl`. Ahora, necesitamos decirle a Pandoc que utilice la hoja de estilo de MLA en vez de la de Chicago que tiene por defecto. Haremos esto actualizando el encabezado o bloque YAML:
 
 ```
 ---
@@ -300,7 +300,7 @@ $ pandoc -S -o principal.docx --filter pandoc-citeproc principal.md
 
 ## Resumen
 
-Ahora debes ser capaz de escribir ensayos en Markdown, crear borradores en formatos múltiples, añadir bibliografías, cambiar estilos de citación de manera sencilla. Un vistazo final al directorio de tu proyecto te mostrará un número de archivos de origen de datos: tu archivo `principal.md`, el archivo `proyecto.bib`, el archivo `mla.csl`, y algunas imágenes. Además de los archivos de origen de datos deberas ver algunos archivos de salida que creamos durante el tutorial: `principal.docx` o `principal.pdf`. Tu carpeta debe verse más o menos de esta manera.
+Ahora debes ser capaz de escribir ensayos en Markdown, crear borradores en formatos múltiples, añadir bibliografías, cambiar estilos de citación de manera sencilla. Un vistazo final al directorio de tu proyecto te mostrará un número de archivos de origen de datos: tu archivo `principal.md`, el archivo `proyecto.bib`, el archivo `mla.csl`, y algunas imágenes. Además de los archivos de origen de datos deberás ver algunos archivos de salida que creamos durante el tutorial: `principal.docx` o `principal.pdf`. Tu carpeta debe verse más o menos de esta manera.
 
 ```
 	tutorial-Pandoc/
@@ -321,13 +321,13 @@ No obstante que sugerimos comenzar con un simple editor de texto plano, hay much
 
 Pero el ecosistema no está limitado sólo a editores. [Gitit](http://gitit.net/) e [Ikiwiki](https://github.com/dubiousjim/pandoc-iki) soportan escritura en Markdown utilizando Pandoc como compilador. A esta lista se puede agregar una serie de herramientas que generan páginas web estáticas de manera rápida: [Yst](https://github.com/jgm/yst), [Jekyll](http://github.com/fauno/jekyll-pandoc-multiple-formats), [Hakyll](http://jaspervdj.be/hakyll/) y [bash shell script](https://github.com/wcaleb/website) por el historiador Caleb McDaniel.
 
-Finalmente, se están creando plataformas de publicación enteras alrededor del uso de Markdown. Markdown a la plataforma de mercado [Leanpub](https://leanpub.com), puede ser una alternativa interesante al modelo tradicional de publicación. Y nosotros mismos estamos experimentando con el diseño de una revista académica en GitHub y [readthedocs.org](http://readthedocs.org) (herramientas que suelen utilizarse para técnicas de documentación).
+Finalmente, se están creando plataformas de publicación enteras alrededor del uso de Markdown. Para la plataforma de mercado [Leanpub](https://leanpub.com), Markdown puede ser una alternativa interesante al modelo tradicional de publicación. Y nosotros mismos estamos experimentando con el diseño de una revista académica en GitHub y [readthedocs.org](http://readthedocs.org) (herramientas que suelen utilizarse para técnicas de documentación).
 
 [^1]: ¡No te preocupes si no entiendes aún alguna de esta terminología!
 
 [^2]: Los archivos fuente de este documento se pueden [descargar de GitHub](https://github.com/dhcolumbia/pandoc-workflow). Utiliza la opción "raw" cuando lo veas en GitHub para observar la fuente de Markdown. Los autores queremos agradecer a Alex Gil y sus colegas del Columbia's Digital Humanities Center, y a los participantes de openLab en el Studio de la Bilioteca Butler por probar el código de este tutorial en diversas plataformas.
 
-[^3]: véase la excelente discusión sobre este tema, por Charlie Stross, en [Why Microsoft Word Must Die](http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html).
+[^3]: Véase la excelente discusión sobre este tema, por Charlie Stross, en [Why Microsoft Word Must Die](http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html).
 
 [^4]: Toma en cuenta que la extensión .bib debe estar "vinculada" a Zotero en tu sistema operativo. Esto significa que si haces doble click en un archivo .bib, es probable que Zotero intente abrir el archivo mientras que nosotros queremos abrirlo con un editor de texto. Eventualmente, querrás asociar la extensión .bib a tu editor de texto.
 
