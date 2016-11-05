@@ -28,7 +28,7 @@ Si no tienes estos archivos de las lecciones anteriores, puedes descargar un [ar
 
 Nuestros n-gramas tienen un número impar de palabras por una razón. En este punto, los n-gramas no contienen en realidad una palabra clave; son solamente una lista de palabras. Sin  embargo, si tenemos un n-grama impar, la palabra central siempre tendrá el mismo número de palabras a la izquierda y a la derecha. Entonces, podemos utilizar esa palabra del medio como nuestra palabra clave. Por ejemplo, ["it", "was", "the", "best", "of", "times", "it"] es un 7-grama de la palabra clave "best".
 
-Ya que tenemos un texto largo, quisieramos ser capaces de generar una salida para todos los n-gramas de nuestra palabra clave. Para ello, vamos a poner cada n-grama en un *diccionario* utilizando la palabra de enmedio como *clave*. Para averiguar la palabra clave de cada n-grama podemos utilizar la *posición de índice* de la lista. Si estamos trabajando con 5-gramas, por ejemplo, el contexto izquiero consistirá en términos indexados en 0, 1; la palabra clave en 2 y los términos del contexto derecho en 3, 4. Dado que los índices en Python comienzan en 0, la palabra clave de un 5-grama siempre estará en la posición de índice 2.
+Ya que tenemos un texto largo, quisiéramos ser capaces de generar una salida para todos los n-gramas de nuestra palabra clave. Para ello, vamos a poner cada n-grama en un *diccionario* utilizando la palabra de en medio como *clave*. Para averiguar la palabra clave de cada n-grama podemos utilizar la *posición de índice* de la lista. Si estamos trabajando con 5-gramas, por ejemplo, el contexto izquierdo consistirá en términos indexados en 0, 1; la palabra clave en 2 y los términos del contexto derecho en 3, 4. Dado que los índices en Python comienzan en 0, la palabra clave de un 5-grama siempre estará en la posición de índice 2.
 
 Eso está bien para 5-gramas; pero para hacer el código un poco más robusto queremos asegurarnos de que funcionará para cualquier longitud de n-gramas, asumiendo que su longitud será un número impar. Para ello, vamos a tomar la longitud del n-grama, dividirla entre 2 y dejar aparte el resto. Podemos lograrlo usando un operador de `división de piso` representado por dos barras, que divide y da como resultado el número entero más cercano, siempre redondeando hacia abajo -de ahí el término `piso`.
 
@@ -122,7 +122,7 @@ print(worddict["black"])
 
 Como puedes observar al ejecutar el programa anterior, la salida de datos aún no es muy legible. Lo que tenemos que hacer es dividir el n-grama en tres partes: antes de la palabra clave, la palabra clave y después de la palabra clave. Podemos utilizar las técnicas aprendidas en los capítulos anteriores para encerrar todo en HTML para que sea fácil de leer.
 
-Utilizando el mismo método anterior de `slice`, vamos a crear nuestras tres partes. Abre un intérprete de Python para ensayar los siguiente ejemplos. Pon especial atención en lo que aparece antes y después de los dos puntos en cada caso. Saber cómo manipular el método de `slice` es una poderosa habilidad para un nuevo historiador programador.
+Utilizando el mismo método anterior de `slice`, vamos a crear nuestras tres partes. Abre un intérprete de Python para ensayar los siguiente ejemplos. Pon especial atención a lo que aparece antes y después de los dos puntos en cada caso. Saber cómo manipular el método de `slice` es una poderosa habilidad para un nuevo historiador programador.
 
 ``` python
 # calcula la longitud del n-grama
@@ -165,7 +165,7 @@ print('#' + str(kwic[keyindex]).center(len(kwic[keyindex])+6) + '#')
 -> #   black   #
 ```
 
-Por último, queremos que el contexto de la izquiera esté alineado a la derecha. Dependiendo de qué tan grande sea *n*, vamos a necesitar incrementar la longitud total de esta columna. Haremos esto mediante la definición de una variable llamada *with* (*ancho*) y luego hacer que la longitud de la columna sea un múltiplo de esa variable (se utilizó un ancho de 10 caracteres, pero se puede hacer más grande o más pequeña según se desee). El método `rjust` se encarga de alinear a la derecha. Una vez más, hemos añadido marcas de almohadilla para que puedas ver los espacios en blanco.
+Por último, queremos que el contexto de la izquierda esté alineado a la derecha. Dependiendo de qué tan grande sea *n*, vamos a necesitar incrementar la longitud total de esta columna. Haremos esto mediante la definición de una variable llamada *with* (*ancho*) y luego hacer que la longitud de la columna sea un múltiplo de esa variable (se utilizó un ancho de 10 caracteres, pero se puede hacer más grande o más pequeña según se desee). El método `rjust` se encarga de alinear a la derecha. Una vez más, hemos añadido marcas de almohadilla para que puedas ver los espacios en blanco.
 
 ``` python
 width = 10
@@ -227,7 +227,7 @@ obo.wrapStringInHTML('html-to-kwic', url, outstr)
 
 La primera parte del programa es igual que en el caso anterior. En la segunda parte del programa hemos encerrado todo en una etiqueta HTML *pre* (pre-formateada), lo cual le indica al navegador que no se confunda con los espacios que hemos agregado.
 
-Además, toma en cuenta que hemos utilizado el método `has_key` en el diccionario para asegurarnos que la palabra clave realmente se encuentra en nuestro texto. Si no es así, podemos imprimir un mensaje para el usuario antes de enviar la salida a Firefox. Prueba a cambiar la variable de objetivo (*target*) a algunas otras palabras clave. Intenta con alguna que tú sepas que no se encuentra en el texto para asegurarte que tu programa no genere salida de datos cuando no deba.
+Además, toma en cuenta que hemos utilizado el método `has_key` en el diccionario para asegurarnos que la palabra clave realmente se encuentra en nuestro texto. Si no es así, podemos imprimir un mensaje para el usuario antes de enviar la salida a Firefox. Prueba cambiar la variable de objetivo (*target*) a algunas otras palabras clave. Intenta con alguna que tú sepas que no se encuentra en el texto para asegurarte que tu programa no genere salida de datos cuando no deba.
 
 Ahora hemos creado un programa que busca una palabra clave en un diccionario creado a partir de una página HTML de la Web, y luego produce una salida de datos con n-gramas de esa palabra clave en otro archivo HTML para visualizar en la Web. Todas las lecciones hasta este punto han incluido partes del vocabulario de Python y métodos necesarios para crear este programa final. Al referirte a esas lecciones, ahora puedes experimentar con Python para crear programas que realicen tareas específicas que te ayudarán en tu proceso de investigación.
 
